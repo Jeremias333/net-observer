@@ -1,0 +1,13 @@
+#!/bin/sh -
+[Unit]
+Description=NET Observer System
+
+[Service]
+WorkingDirectory=/opt/net-observer/src
+ExecStart=/opt/net-observer/venv/bin/python main.py
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
